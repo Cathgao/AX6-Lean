@@ -13,11 +13,9 @@ on:
       - main
   schedule:
     - cron: 0 9 * * */2
-  workflow_call:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Checkout
       uses: actions/checkout@main
